@@ -2,7 +2,8 @@
   <h3>Parent Component</h3>
   <div>{{ message }}</div>
   <app-child 
-    [childCount]="parentCount"
-    (countChanged)="onCountChanged($event)">
+    [childCount]="parentCount" 
+    (countChanged)="onCountChanged($event)"><!--event binding -->
+    <!-- [childCount]="parentCount"  data binding or attribute binding-->
   </app-child>
 </div>
