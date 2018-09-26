@@ -6,3 +6,14 @@
     <button (click)="decrementCount()">Decrement</button>
   </div>
 </div>
+<p></p>
+<div>
+  <div>
+    <div>
+    <h3>Add actor form</h3>
+    <div>Actor Name : <span><input type="text" [(ngModel)]="newActor.name"></span></div>
+    <div>Actor city : <span><input type="text" [(ngModel)]="newActor.city"></span></div>
+    <div>Actor Age :  <span><input type="text" [(ngModel)]="newActor.age"></span></div>
+    <span><button (click)="btnAddActor()">Add</button></span>
+  </div>
+</div>

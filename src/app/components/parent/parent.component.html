@@ -1,9 +1,19 @@
 <div id="parentDiv">
   <h3>Parent Component</h3>
   <div>{{ message }}</div>
+<!--this is for display entire actor list-->
+ <!-- <div>
+    The actor form is :: 
+    <ul>
+      <li *ngFor="let actor of actors">
+      {{actor.name}} ---{{actor.city}} -- {{actor.age}}
+    </li>
+    </ul>
+  </div>-->
   <app-child 
     [childCount]="parentCount" 
-    (countChanged)="onCountChanged($event)"><!--event binding -->
+    (countChanged)="onCountChanged($event)"
+    (isActorListUpdated)="updateActorList($event)"><!--event binding -->
     <!-- [childCount]="parentCount"  data binding or attribute binding-->
   </app-child>
 </div>
