@@ -26,3 +26,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# AngularDemoKT" 
+
+### Steps to run on tomcat server 
+
+http://www.thejavageek.com/2018/01/04/deploying-angular-app-tomcat/
+
+Go to our app and run below command.
+ng build --base-href=/angular/
+
+    ng invokes angular
+    build asks angular to build current app
+    –base-href tells angular to create a reference directory where generated index.html file will be placed. So, in current case, generated files need to be placed in /angular folder in tomcat directory structure.
+
+When command runs successfully, it creates all required files in dist folder as below.
+We are ready to deploy angular app in tomcat. Just copy all these files and paste them in /angular folder under /webapps folder in tomcat.
+
+Once copied, fire up the server and visit localhost:8080/angular/index.html and our bikes app should be seen running.
+
